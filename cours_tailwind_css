@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamard Optique – Opticien à l'Arbresle (69) depuis 1950</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper JS pour les carrousels -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind config : couleurs personnalisées et polices -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dore: '#b8860b',
+            'dore-fonce': '#8a6d00',
+            beige: '#f5f2ee',
+            'beige-bord': '#e5ddd0',
+            'beige-header': '#f9f6f0',
+          },
+          fontFamily: {
+            titre: ['"Cormorant Garamond"', 'serif'],
+            texte: ['Nunito', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="bg-white font-texte text-gray-800">
+
+
+  <!-- ============================================================
+       BARRE DU DESSUS : réseaux sociaux
+  ============================================================ -->
+  <div class="bg-beige-header border-b border-beige-bord py-2">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-end gap-5">
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/nathaliechamardopticiens"
+         target="_blank" rel="noopener"
+         class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-blue-700 transition-colors">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+        Facebook
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/nathaliechamardopticiens/"
+         target="_blank" rel="noopener"
+         class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-pink-600 transition-colors">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+        Instagram
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       NAVBAR PRINCIPALE
+  ============================================================ -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+
+      <!-- MENU GAUCHE (desktop) -->
+      <nav class="hidden lg:flex items-center gap-8">
+
+        <!-- Accueil -->
+        <a href="/"
+           class="text-xs font-bold tracking-widest uppercase text-dore border-b-2 border-dore pb-0.5 transition-colors">
+          Accueil
+        </a>
+
+        <!-- Dropdown Lunettes -->
+        <div class="relative group">
+          <a href="#"
+             class="flex items-center gap-1 text-xs font-bold tracking-widest uppercase text-gray-800 border-b-2 border-transparent pb-0.5 hover:text-dore hover:border-dore transition-colors">
+            Lunettes
+            <svg class="w-3 h-3 fill-current mt-0.5" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </a>
+          <!-- Sous-menu : visible au hover grâce à group-hover -->
+          <div class="hidden group-hover:block absolute top-full left-0 bg-white shadow-xl min-w-48 border-t-2 border-dore z-50">
+            <a href="#" class="block px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-800 border-b border-beige hover:bg-beige hover:text-dore transition-colors">Lunettes enfant</a>
+            <a href="#" class="block px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-800 border-b border-beige hover:bg-beige hover:text-dore transition-colors">Lunettes femme</a>
+            <a href="#" class="block px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-800 hover:bg-beige hover:text-dore transition-colors">Lunettes homme</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 border-b-2 border-transparent pb-0.5 hover:text-dore hover:border-dore transition-colors">Lentilles</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 border-b-2 border-transparent pb-0.5 hover:text-dore hover:border-dore transition-colors">Verres Zeiss</a>
+
+      </nav>
+
+      <!-- LOGO CENTRAL -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7ccd750.85084113/header_logo.png -->
+      <a href="/" class="flex-shrink-0">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7ccd750.85084113/header_logo.png"
+          alt="Logo Chamard Optique"
+          class="h-14 object-contain"
+        />
+      </a>
+
+      <!-- MENU DROITE (desktop) -->
+      <nav class="hidden lg:flex items-center gap-6">
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 border-b-2 border-transparent pb-0.5 hover:text-dore hover:border-dore transition-colors">Votre opticien</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 border border-gray-800 px-4 py-1.5 hover:bg-gray-800 hover:text-white transition-colors">Opticien à domicile</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-white bg-yellow-800 px-4 py-1.5 hover:bg-yellow-900 transition-colors">Contact</a>
+      </nav>
+
+      <!-- BOUTON BURGER (mobile) -->
+      <button id="btn-burger"
+              class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none"
+              aria-label="Ouvrir le menu">
+        <span class="block w-6 h-0.5 bg-gray-800" id="ligne1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800" id="ligne2"></span>
+        <span class="block w-6 h-0.5 bg-gray-800" id="ligne3"></span>
+      </button>
+
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div id="menu-mobile" class="hidden lg:hidden border-t border-gray-100 bg-white">
+      <nav class="flex flex-col px-4 py-4 gap-1">
+
+        <a href="/" class="text-xs font-bold tracking-widest uppercase text-dore py-3 border-b border-gray-100">Accueil</a>
+
+        <!-- Sous-menu Lunettes mobile -->
+        <div>
+          <button id="btn-lunettes-mobile"
+                  class="w-full flex justify-between items-center text-xs font-bold tracking-widest uppercase text-gray-800 py-3 border-b border-gray-100">
+            Lunettes
+            <svg id="fleche-lunettes" class="w-4 h-4 fill-current transition-transform" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </button>
+          <div id="sous-menu-lunettes" class="hidden flex-col bg-beige pl-4">
+            <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-700 py-2.5 border-b border-gray-200 hover:text-dore transition-colors">Lunettes enfant</a>
+            <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-700 py-2.5 border-b border-gray-200 hover:text-dore transition-colors">Lunettes femme</a>
+            <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-700 py-2.5 hover:text-dore transition-colors">Lunettes homme</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 py-3 border-b border-gray-100 hover:text-dore transition-colors">Lentilles</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 py-3 border-b border-gray-100 hover:text-dore transition-colors">Verres Zeiss</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 py-3 border-b border-gray-100 hover:text-dore transition-colors">Votre opticien</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 py-3 border-b border-gray-100 hover:text-dore transition-colors">Opticien à domicile</a>
+        <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-800 py-3 hover:text-dore transition-colors">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO : CARROUSEL (2 slides)
+  ============================================================ -->
+  <section>
+    <div class="swiper w-full h-[90vh] min-h-[500px]" id="swiper-hero">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7e3ec17.65017716/Photo_01.jpg -->
+        <div class="swiper-slide relative overflow-hidden">
+          <img
+            src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7e3ec17.65017716/Photo_01.jpg"
+            alt="Votre opticien à l'Arbresle"
+            class="w-full h-full object-cover"
+          />
+          <!-- Dégradé sombre sur la gauche -->
+          <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent"></div>
+          <!-- Texte du slide -->
+          <div class="absolute top-1/2 -translate-y-1/2 left-[8%] max-w-xl text-white">
+            <p class="text-xs font-semibold uppercase tracking-widest text-yellow-300 mb-3">
+              Nathalie Chamard Opticiens
+            </p>
+            <h2 class="font-titre text-5xl md:text-6xl font-semibold leading-tight mb-5">
+              Votre opticien<br />à l'Arbresle
+            </h2>
+            <p class="text-gray-200 text-base md:text-lg leading-relaxed mb-7 max-w-md">
+              Choisir des lunettes n'a jamais été aussi agréable, grâce à notre équipe aussi passionnée que qualifiée.
+            </p>
+            <a href="https://www.doctolib.fr/magasin-d-optique/l-arbresle/chamard-optique"
+               target="_blank" rel="noopener"
+               class="inline-block bg-dore hover:bg-dore-fonce text-white text-sm font-bold tracking-wider px-6 py-3 transition-colors">
+              Prendre rendez-vous
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/690dd1c7ad5d50.62466386/bandeau.jpg -->
+        <div class="swiper-slide relative overflow-hidden">
+          <img
+            src="https://www.nathalie-chamard-opticiens.fr/scripts/files/690dd1c7ad5d50.62466386/bandeau.jpg"
+            alt="Opticien certifié Optikid"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent"></div>
+          <div class="absolute top-1/2 -translate-y-1/2 left-[8%] max-w-xl text-white">
+            <h2 class="font-titre text-5xl md:text-6xl font-semibold leading-tight mb-5">
+              Opticien certifié<br />Optikid
+            </h2>
+            <p class="text-gray-200 text-base md:text-lg leading-relaxed mb-7 max-w-md">
+              Une expertise reconnue dans le choix et l'ajustement des lunettes pour enfant et adolescent.
+            </p>
+            <a href="#"
+               class="inline-block bg-dore hover:bg-dore-fonce text-white text-sm font-bold tracking-wider px-6 py-3 transition-colors">
+              Notre savoir-faire
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Flèches -->
+      <div class="swiper-button-prev !text-white"></div>
+      <div class="swiper-button-next !text-white"></div>
+
+      <!-- Points de pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ENCARTS : 4 catégories
+  ============================================================ -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex flex-col md:flex-row gap-5">
+
+      <!-- Encart Lunettes -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7ee3954.69906580/photo_02.jpg -->
+      <div class="relative overflow-hidden flex-1 group">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7ee3954.69906580/photo_02.jpg"
+          alt="Lunettes"
+          class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div class="absolute bottom-0 left-0 right-0 bg-white/92 border-t-4 border-dore px-5 py-4">
+          <p class="text-xs text-gray-500 uppercase tracking-widest">Changer de</p>
+          <h3 class="font-titre text-xl font-semibold text-gray-800 mt-0.5">Lunettes</h3>
+          <a href="#" class="inline-block mt-2 text-xs font-bold uppercase tracking-widest text-dore border-b border-dore hover:text-dore-fonce transition-colors">Découvrir</a>
+        </div>
+      </div>
+
+      <!-- Encart Lentilles -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7f09aa6.11362136/photo_03.jpg -->
+      <div class="relative overflow-hidden flex-1 group">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7f09aa6.11362136/photo_03.jpg"
+          alt="Lentilles"
+          class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div class="absolute bottom-0 left-0 right-0 bg-white/92 border-t-4 border-dore px-5 py-4">
+          <p class="text-xs text-gray-500 uppercase tracking-widest">Nos solutions</p>
+          <h3 class="font-titre text-xl font-semibold text-gray-800 mt-0.5">Lentilles</h3>
+          <a href="#" class="inline-block mt-2 text-xs font-bold uppercase tracking-widest text-dore border-b border-dore hover:text-dore-fonce transition-colors">Découvrir</a>
+        </div>
+      </div>
+
+      <!-- Encart Zeiss -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7f2a9c7.55719517/photo_04.jpg -->
+      <div class="relative overflow-hidden flex-1 group">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a7f2a9c7.55719517/photo_04.jpg"
+          alt="Verres Zeiss"
+          class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div class="absolute bottom-0 left-0 right-0 bg-white/92 border-t-4 border-dore px-5 py-4">
+          <p class="text-xs text-gray-500 uppercase tracking-widest">Les verres</p>
+          <h3 class="font-titre text-xl font-semibold text-gray-800 mt-0.5">Zeiss</h3>
+          <a href="#" class="inline-block mt-2 text-xs font-bold uppercase tracking-widest text-dore border-b border-dore hover:text-dore-fonce transition-colors">Découvrir</a>
+        </div>
+      </div>
+
+      <!-- Encart Domicile -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a8009cc8.13051353/Photo_05-.jpg -->
+      <div class="relative overflow-hidden flex-1 group">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a8009cc8.13051353/Photo_05-.jpg"
+          alt="Opticien à domicile"
+          class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div class="absolute bottom-0 left-0 right-0 bg-white/92 border-t-4 border-dore px-5 py-4">
+          <p class="text-xs text-gray-500 uppercase tracking-widest">RDV à</p>
+          <h3 class="font-titre text-xl font-semibold text-gray-800 mt-0.5">Domicile</h3>
+          <a href="#" class="inline-block mt-2 text-xs font-bold uppercase tracking-widest text-dore border-b border-dore hover:text-dore-fonce transition-colors">Découvrir</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PRÉSENTATION TEXTE
+  ============================================================ -->
+  <section class="py-12 max-w-3xl mx-auto px-4 text-center">
+    <h2 class="font-titre text-4xl md:text-5xl font-semibold text-gray-800 leading-tight mb-6">
+      Chamard Opticiens<br />Votre opticien à l'Arbresle
+    </h2>
+    <p class="text-gray-600 text-base leading-relaxed mb-4">
+      Depuis 1950, Chamard Opticiens met son savoir-faire de l'optique au service de votre vision.
+      Installée en plein cœur de L'Arbresle, notre entreprise familiale est bien plus qu'un simple opticien.
+    </p>
+    <p class="text-gray-700 font-semibold text-base mb-1">Vous y êtes accueillis par une équipe aussi passionnée que qualifiée.</p>
+    <p class="text-gray-700 font-semibold text-base mb-1">Entièrement à votre écoute, nous vous conseillons dans une ambiance conviviale et colorée.</p>
+    <p class="text-gray-700 font-semibold text-base">Vous choisissez vos nouvelles lunettes ou lentilles dans la bonne humeur !</p>
+  </section>
+
+
+  <!-- ============================================================
+       EXPERTISE + IMAGE BOUTIQUE
+  ============================================================ -->
+  <section class="bg-beige py-14">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-10 items-center">
+
+      <!-- Image boutique -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/677e38131ac6c0.73022036/chamard-opticiens-l-arbresle.png -->
+      <div class="lg:w-1/2">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/677e38131ac6c0.73022036/chamard-opticiens-l-arbresle.png"
+          alt="Magasin Chamard Opticiens"
+          class="w-full max-h-96 object-cover shadow-md"
+        />
+      </div>
+
+      <!-- Texte -->
+      <div class="lg:w-1/2">
+        <h3 class="font-titre text-3xl font-semibold text-gray-800 mb-6">
+          Une expertise complète de l'optique
+        </h3>
+        <ul class="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <li class="flex gap-3">
+            <span class="text-dore font-bold text-lg flex-shrink-0 leading-none mt-0.5">›</span>
+            <span><strong>Une équipe qualifiée et diplômée,</strong> spécialisée en santé visuelle et contactologie.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-dore font-bold text-lg flex-shrink-0 leading-none mt-0.5">›</span>
+            <span>
+              <strong>Une prise de rendez-vous</strong> possible
+              <a href="https://www.doctolib.fr/magasin-d-optique/l-arbresle/chamard-optique"
+                 target="_blank"
+                 class="underline text-yellow-800 hover:text-dore transition-colors">
+                via la plateforme Doctolib
+              </a> : simple et rapide !
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-dore font-bold text-lg flex-shrink-0 leading-none mt-0.5">›</span>
+            <span><strong>Des contrôles de vue réalisés sur place.</strong> Un gain de temps et une précision optimale !</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-dore font-bold text-lg flex-shrink-0 leading-none mt-0.5">›</span>
+            <span><strong>Un atelier intégré pour le montage des verres,</strong> sans sous-traitance.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-dore font-bold text-lg flex-shrink-0 leading-none mt-0.5">›</span>
+            <span><strong>Un service d'opticien à domicile,</strong> disponible dans les nombreux villages autour de l'Arbresle.</span>
+          </li>
+        </ul>
+        <div class="mt-7">
+          <a href="https://nodalview.com/s/18pzIvolfBb9-vzuCopbHM"
+             target="_blank"
+             class="inline-block bg-gray-800 hover:bg-gray-700 text-white text-sm font-bold tracking-wide px-6 py-3 transition-colors">
+            Découvrez notre boutique en visite virtuelle
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       LUNETTES POUR TOUS (image droite + texte gauche)
+  ============================================================ -->
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row-reverse gap-10 items-center">
+
+      <!-- Image -->
+      <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/67657a565a93a2.94478097/presentation_image_cadre.jpg -->
+      <div class="lg:w-1/2">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/67657a565a93a2.94478097/presentation_image_cadre.jpg"
+          alt="Lunettes pour tous les styles"
+          class="w-full max-h-96 object-cover shadow-md"
+        />
+      </div>
+
+      <!-- Texte -->
+      <div class="lg:w-1/2">
+        <h3 class="font-titre text-3xl font-semibold text-gray-800 mb-5">
+          Des lunettes pour tous les styles, toutes les envies
+        </h3>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+          Vous trouverez chez Chamard Opticiens une large gamme de montures pour femme, homme et enfant,
+          adaptées à toutes les morphologies, styles et budgets.
+        </p>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+          <strong><em>Optikid : l'expertise visuelle des enfants et adolescents</em></strong><br />
+          Certifié Optikid, Chamard Opticiens vous offre un choix varié de montures spécialement conçues pour les besoins des plus jeunes.
+        </p>
+        <p class="text-sm text-gray-600 leading-relaxed mb-7">
+          <strong><em>Lentilles de contact</em></strong><br />
+          Une large gamme de lentilles et de produits d'entretien vous attend en magasin.
+          Diplômées en contactologie, nos opticiennes répondront à toutes vos questions.
+        </p>
+        <a href="#"
+           class="inline-block bg-dore hover:bg-dore-fonce text-white text-sm font-bold tracking-wide px-6 py-3 transition-colors">
+          Contactez votre expert de l'optique à l'Arbresle
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BANDEAU AVIS GOOGLE
+  ============================================================ -->
+  <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/677ce58a149285.54499542/reviews.jpg -->
+  <section class="bg-gray-900 py-8">
+    <div class="max-w-7xl mx-auto px-4 flex justify-center">
+      <a href="https://www.google.com/search?q=avis+nathalie+chamard+opticiens"
+         target="_blank" rel="noopener">
+        <img
+          src="https://www.nathalie-chamard-opticiens.fr/scripts/files/677ce58a149285.54499542/reviews.jpg"
+          alt="Avis Google Chamard Optique"
+          class="max-h-20 object-contain hover:opacity-80 transition-opacity"
+        />
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CARROUSEL MARQUES / PARTENAIRES
+  ============================================================ -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="swiper" id="swiper-marques">
+        <div class="swiper-wrapper items-center">
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81862f9.36009045/catimini.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81862f9.36009045/catimini.png"
+                 alt="Catimini" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81afde9.89526898/Banana-Moon.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81afde9.89526898/Banana-Moon.png"
+                 alt="Banana Moon" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81ce131.73745707/cecchi.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81ce131.73745707/cecchi.png"
+                 alt="Cecchi" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81f5982.21627989/converse.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a81f5982.21627989/converse.png"
+                 alt="Converse" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0e4a671.79899392/taylor-morris.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0e4a671.79899392/taylor-morris.png"
+                 alt="Taylor Morris" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0e8b7d6.67243846/swarovski.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0e8b7d6.67243846/swarovski.png"
+                 alt="Swarovski" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0eafb04.04778067/sunday-somewhere.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0eafb04.04778067/sunday-somewhere.png"
+                 alt="Sunday Somewhere" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0ef8b90.35680763/seiko.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e0ef8b90.35680763/seiko.png"
+                 alt="Seiko" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e102a808.66739923/liujo.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e102a808.66739923/liujo.png"
+                 alt="Liu Jo" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e11a7f02.55590879/tommy-hilfiger.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e11a7f02.55590879/tommy-hilfiger.png"
+                 alt="Tommy Hilfiger" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e11caee4.20741210/xavier-garcia.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e11caee4.20741210/xavier-garcia.png"
+                 alt="Xavier Garcia" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e11f7809.92199172/barbie.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e11f7809.92199172/barbie.png"
+                 alt="Barbie" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e12232b6.73416571/elevenparis.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e12232b6.73416571/elevenparis.png"
+                 alt="Eleven Paris" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+          <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e124e924.76467010/christian-lacroix.png -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="https://www.nathalie-chamard-opticiens.fr/scripts/files/6787b3e124e924.76467010/christian-lacroix.png"
+                 alt="Christian Lacroix" class="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all mx-auto" />
+          </div>
+
+        </div>
+
+        <div class="swiper-button-prev !text-dore"></div>
+        <div class="swiper-button-next !text-dore"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       HORAIRES
+  ============================================================ -->
+  <section class="bg-beige py-14">
+    <div class="max-w-lg mx-auto px-4">
+
+      <h2 class="font-titre text-4xl font-semibold text-gray-800 mb-8 text-center">Horaires</h2>
+
+      <div class="bg-white shadow-sm px-6 py-2">
+
+        <!-- Lundi : fermé -->
+        <div class="flex justify-between items-center py-3 border-b border-beige-bord text-sm text-gray-400 italic">
+          <span class="font-semibold">Lundi</span>
+          <span>Fermé</span>
+        </div>
+
+        <!-- Mardi -->
+        <div class="flex justify-between items-center py-3 border-b border-beige-bord text-sm text-gray-800">
+          <span class="font-semibold">Mardi</span>
+          <span>09:00 – 12:15 &nbsp;// 14:30 – 19:00</span>
+        </div>
+
+        <!-- Mercredi -->
+        <div class="flex justify-between items-center py-3 border-b border-beige-bord text-sm text-gray-800">
+          <span class="font-semibold">Mercredi</span>
+          <span>09:00 – 12:15 &nbsp;// 14:30 – 19:00</span>
+        </div>
+
+        <!-- Jeudi -->
+        <div class="flex justify-between items-center py-3 border-b border-beige-bord text-sm text-gray-800">
+          <span class="font-semibold">Jeudi</span>
+          <span>09:00 – 12:15 &nbsp;// 14:30 – 19:00</span>
+        </div>
+
+        <!-- Vendredi -->
+        <div class="flex justify-between items-center py-3 border-b border-beige-bord text-sm text-gray-800">
+          <span class="font-semibold">Vendredi</span>
+          <span>09:00 – 12:15 &nbsp;// 14:30 – 19:00</span>
+        </div>
+
+        <!-- Samedi -->
+        <div class="flex justify-between items-center py-3 border-b border-beige-bord text-sm text-gray-800">
+          <span class="font-semibold">Samedi</span>
+          <span>09:00 – 12:15 &nbsp;// 14:15 – 17:00</span>
+        </div>
+
+        <!-- Dimanche : fermé -->
+        <div class="flex justify-between items-center py-3 text-sm text-gray-400 italic">
+          <span class="font-semibold">Dimanche</span>
+          <span>Fermé</span>
+        </div>
+
+      </div>
+
+      <p class="text-xs text-center text-gray-500 mt-5 leading-relaxed">
+        Possibilité de rendez-vous au 22 Rue Charles de Gaulle, à L'Arbresle,
+        le lundi ainsi qu'entre 12h et 14h chaque jour.<br />
+        <strong>Réservation par téléphone.</strong>
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-gray-950 text-gray-400 pt-14 pb-6">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-gray-800">
+
+      <!-- Logo + description -->
+      <div>
+        <!-- SOURCE : https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a82d3f30.95210138/footer_logo.png -->
+        <a href="/">
+          <img
+            src="https://www.nathalie-chamard-opticiens.fr/scripts/files/676579a82d3f30.95210138/footer_logo.png"
+            alt="Logo Chamard Optique"
+            class="h-14 object-contain mb-4 brightness-150"
+          />
+        </a>
+        <p class="text-xs leading-relaxed">
+          Nathalie Chamard et son équipe vous accueillent dans leur magasin d'optique situé à L'Arbresle.
+          Vos professionnels en santé visuelle vous présentent un large choix de montures pour tous les goûts.
+          Spécialistes des lunettes pour tous !
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <p class="text-white font-bold text-xs uppercase tracking-widest mb-5">Navigation</p>
+        <ul class="space-y-2.5">
+          <li><a href="/" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Accueil</a></li>
+          <li><a href="#" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Lunettes</a></li>
+          <li><a href="#" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Lentilles</a></li>
+          <li><a href="#" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Verres Zeiss</a></li>
+          <li><a href="#" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Votre opticien</a></li>
+          <li><a href="#" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Opticien à domicile</a></li>
+          <li><a href="#" class="text-xs uppercase tracking-wide hover:text-dore transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div>
+        <p class="text-white font-bold text-xs uppercase tracking-widest mb-5">Nous suivre</p>
+        <div class="flex flex-col gap-4">
+          <a href="https://www.facebook.com/nathaliechamardopticiens" target="_blank" rel="noopener"
+             class="flex items-center gap-2 text-xs hover:text-dore transition-colors">
+            <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+            Rejoignez-nous sur Facebook !
+          </a>
+          <a href="https://www.instagram.com/nathaliechamardopticiens/" target="_blank" rel="noopener"
+             class="flex items-center gap-2 text-xs hover:text-dore transition-colors">
+            <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            Retrouvons-nous sur Instagram !
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-4 pt-5 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-600">
+      <span>© Chamard Optique 2026</span>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-dore transition-colors">Mentions légales</a>
+        <a href="#" class="hover:text-dore transition-colors">Plan du site</a>
+        <a href="#" class="hover:text-dore transition-colors">Gestion des cookies</a>
+      </div>
+      <span>Mise à jour le 04/02/2025</span>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       BOUTON FIXE "Prendre RDV" (côté droit)
+  ============================================================ -->
+  <a href="https://www.doctolib.fr/magasin-d-optique/l-arbresle/chamard-optique"
+     target="_blank" rel="noopener"
+     class="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 z-50 items-center justify-center bg-yellow-800 hover:bg-yellow-900 text-white text-xs font-bold uppercase tracking-widest px-3 py-5 transition-colors"
+     style="writing-mode: vertical-rl; border-radius: 4px 0 0 4px;">
+    Prendre RDV
+  </a>
+
+
+  <!-- ============================================================
+       JAVASCRIPT — séparé clairement du HTML
+  ============================================================ -->
+  <script>
+
+    /* -------------------------------------------------------
+       1. MENU BURGER : ouvre et ferme le menu mobile
+          en animant les 3 lignes en croix
+    ------------------------------------------------------- */
+    var boutonBurger = document.getElementById('btn-burger');
+    var menuMobile   = document.getElementById('menu-mobile');
+    var ligne1       = document.getElementById('ligne1');
+    var ligne2       = document.getElementById('ligne2');
+    var ligne3       = document.getElementById('ligne3');
+    var estOuvert    = false;
+
+    boutonBurger.addEventListener('click', function () {
+      if (!estOuvert) {
+        menuMobile.classList.remove('hidden');
+        ligne1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+        ligne2.style.opacity   = '0';
+        ligne3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        estOuvert = true;
+      } else {
+        menuMobile.classList.add('hidden');
+        ligne1.style.transform = '';
+        ligne2.style.opacity   = '1';
+        ligne3.style.transform = '';
+        estOuvert = false;
+      }
+    });
+
+
+    /* -------------------------------------------------------
+       2. SOUS-MENU LUNETTES (mobile)
+          clique → affiche ou cache les 3 sous-liens
+    ------------------------------------------------------- */
+    var boutonLunettes   = document.getElementById('btn-lunettes-mobile');
+    var sousMenuLunettes = document.getElementById('sous-menu-lunettes');
+    var fleche           = document.getElementById('fleche-lunettes');
+    var sousMenuOuvert   = false;
+
+    boutonLunettes.addEventListener('click', function () {
+      if (!sousMenuOuvert) {
+        sousMenuLunettes.classList.remove('hidden');
+        sousMenuLunettes.classList.add('flex');
+        fleche.style.transform = 'rotate(180deg)';
+        sousMenuOuvert = true;
+      } else {
+        sousMenuLunettes.classList.add('hidden');
+        sousMenuLunettes.classList.remove('flex');
+        fleche.style.transform = '';
+        sousMenuOuvert = false;
+      }
+    });
+
+
+    /* -------------------------------------------------------
+       3. CARROUSEL HERO
+          défilement automatique toutes les 5 secondes
+          avec flèches et points de navigation
+    ------------------------------------------------------- */
+    var carrouselHero = new Swiper('#swiper-hero', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      speed: 800,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+
+
+    /* -------------------------------------------------------
+       4. CARROUSEL MARQUES
+          affiche plusieurs logos à la fois,
+          défilement automatique continu
+    ------------------------------------------------------- */
+    var carrouselMarques = new Swiper('#swiper-marques', {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      speed: 600,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        640:  { slidesPerView: 4, spaceBetween: 30 },
+        1024: { slidesPerView: 6, spaceBetween: 40 }
+      }
+    });
+
+  </script>
+
+</body>
+</html>
